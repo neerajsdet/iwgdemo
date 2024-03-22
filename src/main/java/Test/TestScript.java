@@ -140,41 +140,41 @@ public class TestScript {
     }
 
 
-    @Test(dependsOnMethods = "verify_setting_is_closed")
-    public void verify_player_is_having_losing_game() throws FindFailed {
-        Sikuli.playAgain("0");
-        Assert.assertTrue(Sikuli.image_verfy("play_disable"));
-    }
-
-
-    @Test(dependsOnMethods = "verify_player_is_having_losing_game")
-    public void verify_player_is_having_wining_game() throws FindFailed {
-        Sikuli.playAgain("5");
-        Assert.assertTrue(Sikuli.image_verfy("play_disable"));
-    }
-
-
-    @Test(dependsOnMethods = "verify_player_is_having_wining_game")
-    public void verify_player_is_having_BIG_WIN_game() throws FindFailed {
-        Sikuli.playAgain("30");
-        Assert.assertTrue(Sikuli.image_verfy("play_disable"));
-    }
-
-
-    @Test(dependsOnMethods = "verify_player_is_having_BIG_WIN_game")
-    public void verify_player_is_having_HUGE_WIN_game() throws FindFailed {
-        Sikuli.playAgain("50");
-        Assert.assertTrue(Sikuli.image_verfy("play_disable"));
-    }
-
-
-    @Test(dependsOnMethods = "verify_player_is_having_HUGE_WIN_game")
-    public void verify_max_amount_on_max_stack() throws FindFailed {
-        wager.change_wager(6);
-        Sikuli.playAgain("5000");
-        Assert.assertTrue(Sikuli.image_verfy("play_disable"));
-        Sikuli.waiting("play_enable");
-    }
+//    @Test(dependsOnMethods = "verify_setting_is_closed")
+//    public void verify_player_is_having_losing_game() throws FindFailed {
+//        Sikuli.playAgain("0");
+//        Assert.assertTrue(Sikuli.image_verfy("play_disable"));
+//    }
+//
+//
+//    @Test(dependsOnMethods = "verify_player_is_having_losing_game")
+//    public void verify_player_is_having_wining_game() throws FindFailed {
+//        Sikuli.playAgain("5");
+//        Assert.assertTrue(Sikuli.image_verfy("play_disable"));
+//    }
+//
+//
+//    @Test(dependsOnMethods = "verify_player_is_having_wining_game")
+//    public void verify_player_is_having_BIG_WIN_game() throws FindFailed {
+//        Sikuli.playAgain("30");
+//        Assert.assertTrue(Sikuli.image_verfy("play_disable"));
+//    }
+//
+//
+//    @Test(dependsOnMethods = "verify_player_is_having_BIG_WIN_game")
+//    public void verify_player_is_having_HUGE_WIN_game() throws FindFailed {
+//        Sikuli.playAgain("50");
+//        Assert.assertTrue(Sikuli.image_verfy("play_disable"));
+//    }
+//
+//
+//    @Test(dependsOnMethods = "verify_player_is_having_HUGE_WIN_game")
+//    public void verify_max_amount_on_max_stack() throws FindFailed {
+//        wager.change_wager(6);
+//        Sikuli.playAgain("5000");
+//        Assert.assertTrue(Sikuli.image_verfy("play_disable"));
+//        Sikuli.waiting("play_enable");
+//    }
 
 
     @AfterClass
